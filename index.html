@@ -665,7 +665,7 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Need assistance? Contact us effortlessly through WhatsApp by scanning the provided QR code or simply clicking the WhatsApp button. Our team is ready to address your queries, provide support, and offer personalized solutions. Connect with us today for a seamless and convenient communication experience.</p>
         </div>
 
         <div class="row">
@@ -688,46 +688,68 @@
                 <h4>Whatsapp:</h4>
                 <p>+91 8866936422</p>
               </div>
-              <div>
-                <img src="/static/assets/img/QR_CODE.jpg" width ="500" alt="">
+              
+              <div style="display: flex; justify-content: center;">
+                <img src="/static/assets/img/QR_CODE.jpg" width="500" alt="">
               </div>
+              <style>
+                .send-button {
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  padding: 10px 20px;
+                  font-size: 16px;
+                  background-color: #4CAF50;
+                  color: #fff;
+                  border: none;
+                  border-radius: 20px; /* Adjust the value to control the curvature */
+                  cursor: pointer;
+                  transition: background-color 0.3s ease;
+                }
+              
+                .send-button:hover {
+                  background-color: #45a049;
+                }
+              
+                .whatsapp-icon {
+                  margin-right: 5px;
+                }
+              </style>
+              
+              <div class="text-center">
+                <button class="send-button" onclick="sendWhatsAppMessage()">
+                  <span class="whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i> <!-- Font Awesome WhatsApp icon -->
+                  </span>
+                  Send Message
+                </button>
+              </div>
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+              <script>
+                function sendWhatsAppMessage() {
+                  var message = "Hello, this is my message!"; // Replace with your desired message
+                  var phoneNumber = "+917698735299"; // Replace with the recipient's phone number
+              
+                  var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+                  window.open(url);
+                }
+              </script>
+              
+              
             </div>
-
           </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-start justify-content-center">
+            <div style="max-width: 560px; max-height: 100vh; height: auto;">
+              <video style="width: 560px; height: 770px;" controls>
+                <source src="\static\assets\img\video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              
+            </div>
           </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
+        </section>
+          
+<!-- End Contact Section -->
 
   </main><!-- End #main -->
 
